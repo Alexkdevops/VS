@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+  agent {
+    kubernetes {
+      defaultContainer 'jenkins-slave'
+      yamlFile 'jenkins-slave.yaml'
+    }
     environment {
         GOOGLE_PROJECT_ID = 'vs-kg-infra';
         GOOGLE_SERVICE_ACCOUNT_KEY = credentials('vs-kg-infra-service-account-key');
