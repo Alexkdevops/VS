@@ -1,107 +1,10 @@
-<p align="center">
-    <img width="400" src="https://i.postimg.cc/9Qb78sNX/logo.png" alt="logo" >
-</p>
-
-<h1 align="center"><b>VERSUS</b></h3>
-
-<p>Versus is a global comparison platform, providing unbiased and user-friendly comparisons across various categories. By providing accurate and objective information, as well as structured, easy-to-visualize data, we aim to ease decision-making. It is Open source web application to make comparisons between whatever you want.</p>
-
-## ⌨️ Collaborators
-
-- Team Lead  - Islam Murtazaev
-- Project Manager - Nasip Salmakhunov
-- Frontend developer - Baisalbek Daniiarov
-- Backend developer- Aidarbek Zamirbekov
-- Content Manager - Abdrakhman Niyazahunov
-- Content Manager - Abdraim Kenenbaev
-- UX/UI designer - Nurtilek Zakonbekov
-- QA engineer - Timur Zhusuev
-
-## 🔗 Usefull links
-- [Website](https://versus-kg-hp6yepnvwq-uc.a.run.app/)
-- [Figma Design](https://www.figma.com/file/Db5B1HNRJmFnXwCMV8Zupj/VERSUS?node-id=0%3A1)
-- [Telegram Bot](https://www.t.me/githubbot)
-
-&nbsp;
-
-
-## 📦 Backend Installation instructions
-
-### Ubuntu and Ubuntu-based
-
-1. Install prerequisites for Python build:
-  ```bash 
-  sudo apt-get update
-  sudo apt-get install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
-  ```
-1. Install pyenv: https://github.com/pyenv/pyenv#basic-github-checkout
-1. Install Python: `pyenv install 3.7.4`
-1. Install pyenv-virtualenv: https://github.com/pyenv/pyenv-virtualenv
-1. Create virtualenv while in project directory: `pyenv virtualenv 3.7.4 vs-api-venv`
-   
-   * Virtualenv name `vs-api-venv` is important because `.python-version` also points to it. 
-   It is needed for virtualenv to be activated automatically when you enter project directory 
-   and deactivated when you leave.
-
-### ⚙️ Running dev server
-Install prerequisites if using MySQL:
-```
-sudo apt-get install python3-dev default-libmysqlclient-dev
-```
-
-In activated virtualenv install requirements:
-```
-pip install -r requirements.txt
-```
-
-Create new database in mysql and provide its credentials as environment variables
-```angular2html
-> CREATE DATABASE DATABASE_NAME CHARACTER SET utf8
-```
-
-```
-MYSQL_ROOT_PASSWORD
-MYSQL_DATABASE
-MYSQL_USER
-MYSQL_PASSWORD
-MYSQL_HOST
-MYSQL_PORT
-```
-
-Then run migrations:
-```
-./manage.py migrate
-```
-
-Seed fixtures:
-```
-./manage.py loaddata data.json
-```
-
-This will create a super user with username `admin` and password `Password123`
-
-Run the backend dev server:
-```
-./manage.py runserver
-```
-
-
-### 🔨 Running tests
-
-```
-./manage.py test
-```
-&nbsp;
-
-## 📦 Frontend Installation instructions
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Available Scripts
+## Available Scripts
 
 In the project directory, you can run:
 
-### ⚙️`yarn start`
+### `yarn start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -109,7 +12,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### 🔨 `yarn test`
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
